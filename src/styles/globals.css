@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.scrollCustom {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(183, 179, 179) transparent;
+}
+
+.scrollCustom::-webkit-scrollbar {
+  width: 6px;
+  height: 6px; /* A altura só é vista quando a rolagem é horizontal */
+  border: 1px solid rgba(98, 98, 98, 0.4);
+  box-shadow: 0px 4px 3px black;
+}
+
+.scrollCustom::-webkit-scrollbar-track {
+  background-color: rgb(237, 255, 252);
+  padding: 2px;
+}
+
+.scrollCustom::-webkit-scrollbar-thumb {
+  background-color: #737070;
+  border: 1px solid black;
+}

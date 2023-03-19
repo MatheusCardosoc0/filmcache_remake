@@ -4,13 +4,13 @@ import { useEffect, useState } from "react"
 
 export function useGetFilmsByGenre(){
   const [films, setFilms] = useState<Film[]>([])
-  const [loading, setLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   const [genre, setGenre] = useState(0)
   const [page, setPage] = useState(1)
 
   async function GetFilms() {
-    setLoading(true)
+    setIsLoading(true)
     try {
       const response = await api.get("discover/movie", {
         params: {
@@ -33,7 +33,7 @@ export function useGetFilmsByGenre(){
       setError('')
     }
 
-    setLoading(false)
+    setIsLoading(false)
   }
 
   useEffect(() => {
@@ -42,7 +42,7 @@ export function useGetFilmsByGenre(){
 
   return {
     error,
-    loading,
+    isLoading,
     films,
     setGenre,
     setPage
