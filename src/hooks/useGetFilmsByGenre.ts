@@ -1,4 +1,5 @@
 import { Film } from "@/@types/FilmInterface"
+import { useDataContext } from "@/context/DataContext"
 import { api } from "@/services/axiosConfig"
 import { useEffect, useState } from "react"
 
@@ -6,8 +7,9 @@ export function useGetFilmsByGenre(){
   const [films, setFilms] = useState<Film[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
-  const [genre, setGenre] = useState(0)
   const [page, setPage] = useState(1)
+
+  const {genre} = useDataContext()
 
   async function GetFilms() {
     setIsLoading(true)
@@ -21,7 +23,7 @@ export function useGetFilmsByGenre(){
         }
       })
 
-      setFilms(response.data.results)
+      setFilms(response.data.results.slice(0,18))
       setError('')
     } catch (error) {
       console.log(error)
@@ -44,7 +46,6 @@ export function useGetFilmsByGenre(){
     error,
     isLoading,
     films,
-    setGenre,
     setPage
   }
 }

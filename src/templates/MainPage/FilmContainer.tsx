@@ -5,11 +5,11 @@ import React from 'react'
 
 const FilmContainer = () => {
 
-  const { films, isLoading, setGenre, setPage } = useGetFilmsByGenre()
+  const { films, isLoading, setPage } = useGetFilmsByGenre()
 
   return (
-    <section>
-      <div>
+    <section className='p-8 bg-[#d0cece]'>
+      <div className='flex flex-wrap p-4 drop-shadow-[0px_0px_4px_black] py-20 bg-[#c0bebe] rounded-xl justify-center gap-8'>
         {isLoading ? <Loading /> : (
           films.map(film => (
             <FilmCard key={film.id}
@@ -17,8 +17,6 @@ const FilmContainer = () => {
           ))
         )}
       </div>
-
-      <button className='text-3xl text-red-500' onClick={() => setGenre(80)}>a</button>
     </section>
   )
 }
