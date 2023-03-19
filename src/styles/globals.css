@@ -26,3 +26,13 @@
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
+
+.Shadow{
+  inset: 0;
+  background-image: linear-gradient(to top, rgb(111, 107, 107), rgba(0, 0, 0, 0));
+  height: 40%;
+  position: absolute;
+  margin-top: 70.50%;
+  border-radius: 0.75rem;
+  z-index: -1;
+}

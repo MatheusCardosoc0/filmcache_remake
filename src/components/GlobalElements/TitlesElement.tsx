@@ -12,7 +12,9 @@ const H1 = ({stylish, children}: GlobalElementsInterface) => {
 
 const H2 = ({stylish, children}: GlobalElementsInterface) => {
   return (
-    <h2>H1</h2>
+    <h2 className={`text-2xl text-white font-bold drop-shadow-[0px_0px_2px_black] ${stylish}`}>
+      {children}
+    </h2>
   )
 }
 

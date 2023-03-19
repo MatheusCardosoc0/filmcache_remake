@@ -1,4 +1,4 @@
-import { Paragraph, Title } from '@/components/GlobalElements'
+import {  Paragraph, Title } from '@/components/GlobalElements'
 import React from 'react'
 
 const Header = () => {
@@ -9,7 +9,7 @@ const Header = () => {
       <div className='flex flex-col justify-center items-center gap-20'>
 
         <img src='/assets/Logo.png'
-        className='w-[100px] sm:w-[200px] drop-shadow-[0px_2px_3px_black]' />
+          className='w-[100px] sm:w-[200px] drop-shadow-[0px_2px_3px_black]' />
 
         <Title.H1>
           Cine_See
