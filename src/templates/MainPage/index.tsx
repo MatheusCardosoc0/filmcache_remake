@@ -5,11 +5,11 @@ import Header from './Header'
 
 const MainPage = () => {
   return (
-    <div>
+    <>
       <Header />
       <ContentContainer />
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -1,3 +1,4 @@
+import { Film } from "@/@types/FilmInterface";
 import { createContext, Dispatch, ReactNode, SetStateAction, useContext, useState } from "react";
 
 interface InitialState {
@@ -5,6 +6,8 @@ interface InitialState {
   setGenre: Dispatch<SetStateAction<number>>
   page: number
   setMutatedPage: (op: 'reduce' | 'add') => void
+  currentFilm: Film
+  setCurrentFilm: Dispatch<SetStateAction<Film>>
 }
 
 const ContextData = createContext<InitialState>({} as InitialState)
@@ -13,6 +16,7 @@ const ContextData = createContext<InitialState>({} as InitialState)
 export const ContextDataProvider = ({ children }: { children: ReactNode }) => {
   const [genre, setGenre] = useState(0)
   const [page, setPage] = useState(1)
+  const [currentFilm, setCurrentFilm] = useState({} as Film)
 
   function setMutatedPage(op: 'reduce' | 'add') {
     if(op == 'add'){
@@ -31,7 +35,9 @@ export const ContextDataProvider = ({ children }: { children: ReactNode }) => {
       genre,
       setGenre,
       page,
-      setMutatedPage
+      setMutatedPage,
+      currentFilm,
+      setCurrentFilm
     }}>
       {children}
     </ContextData.Provider>
