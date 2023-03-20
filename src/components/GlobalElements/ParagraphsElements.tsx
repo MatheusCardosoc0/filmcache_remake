@@ -1,26 +1,24 @@
 import React from 'react'
 import { GlobalElementsInterface } from './@types/GlobalElementsInterface'
 
-interface ParagraphProps extends GlobalElementsInterface{
+interface ParagraphProps extends GlobalElementsInterface {
   color?: 'primary' | 'secondary'
 }
 
-const Base = ({children, stylish, color = "secondary"}: ParagraphProps) => {
+const Base = ({ children, stylish, color = "secondary" }: ParagraphProps) => {
   return (
-    <p className={`text-md md:text-lg text-[#3a403b] ${stylish}`}>
+    <p className={`text-md md:text-lg text-[#cdd2ce] ${stylish}`}>
       {children}
     </p>
   )
 }
 
-const Bolder = ({children, stylish, color = "primary"}: ParagraphProps) => {
+const Bolder = ({ children, stylish, color = "primary" }: ParagraphProps) => {
   return (
-    <p className={` font-bold drop-shadow-[1px_1px_2px_black] text-base sm:text-xl
-    ${color == "primary"? "text-[#ffffff]": "text-[#424446]"}
-    ${stylish}`}>
+    <p className={` font-bold drop-shadow-[1px_1px_1px_black] text-base sm:text-xl text-[#ffffff] ${stylish}`}>
       {children}
     </p>
   )
 }
 
-export default {Base, Bolder}
+export default { Base, Bolder }

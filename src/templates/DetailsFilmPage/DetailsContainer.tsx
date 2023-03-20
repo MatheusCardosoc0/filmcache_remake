@@ -2,13 +2,14 @@ import { Paragraph, Title } from '@/components/GlobalElements'
 import { useDataContext } from '@/context/DataContext'
 import { urlImages } from '@/services/urlImages'
 import React from 'react'
+import {} from 'react-icons/ai'
 
 const DetailsContainer = () => {
 
   const { currentFilm } = useDataContext()
 
   return (
-    <section className='flex flex-[3] justify-center py-2 bg-[#847e7e] flex-col items-center gap-20'>
+    <section className='flex flex-[3] justify-center py-2 bg-[#847e7e] flex-col items-center gap-20 mr-[30%]'>
       <div className='p-2 drop-shadow-[1px_1px_1px_black] bg-[#c4c2c2] rounded-xl w-[90%]'>
         <Title.H2 stylish='text-4xl md:text-6xl text-center gap-2 flex flex-col'>
           {currentFilm.title}
@@ -22,10 +23,30 @@ const DetailsContainer = () => {
         <img src={`${urlImages}${currentFilm.backdrop_path}`}
           className="border-[12px] border-[#b9b2b2] drop-shadow-[1px_1px_4px_black]" />
 
-        <div className='w-[90%] p-2 bg-[#afadad] rounded-xl drop-shadow-[1px_1px_1px_black]'>
-          <Paragraph.Bolder>
+        <div className='w-[90%] max-w-[620px] p-4 bg-[#afadad] rounded-xl drop-shadow-[1px_1px_3px_black]'>
+          <Paragraph.Bolder stylish='text-justify'>
             {currentFilm.overview}
           </Paragraph.Bolder>
+        </div>
+        <div className='flex justify-around w-full px-2 text-white drop-shadow-[1px_1px_2px_black] text-xl font-semibold'>
+          <span>
+            <Paragraph.Base>Lingua original:</Paragraph.Base>
+            {currentFilm.original_language}
+          </span>
+          <span>
+            <Paragraph.Base>Data de lançamento:</Paragraph.Base>
+            {currentFilm.release_date}
+          </span>
+        </div>
+        <div className='flex justify-around w-full px-2 text-white drop-shadow-[1px_1px_2px_black] text-xl font-semibold'>
+          <span>
+            <Paragraph.Base>Nota média:</Paragraph.Base>
+            {String(currentFilm.vote_average).slice(0,3)}
+          </span>
+          <span>
+            <Paragraph.Base>Popularidade:</Paragraph.Base>
+            {currentFilm.popularity}
+          </span>
         </div>
       </div>
     </section>
