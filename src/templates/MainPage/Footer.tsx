@@ -2,7 +2,12 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <div>
+      <img src='/assets/Logo.png' 
+      className='w-[120px] h-[120px]' />
+      </div>
+    </footer>
   )
 }
 

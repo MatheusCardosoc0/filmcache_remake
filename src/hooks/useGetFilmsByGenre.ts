@@ -7,9 +7,9 @@ export function useGetFilmsByGenre(){
   const [films, setFilms] = useState<Film[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
-  const [page, setPage] = useState(1)
+  
 
-  const {genre} = useDataContext()
+  const {genre, page} = useDataContext()
 
   async function GetFilms() {
     setIsLoading(true)
@@ -46,6 +46,6 @@ export function useGetFilmsByGenre(){
     error,
     isLoading,
     films,
-    setPage
+    page
   }
 }
