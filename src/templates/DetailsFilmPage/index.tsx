@@ -1,6 +1,6 @@
 import React from 'react'
 import DetailsContainer from './DetailsContainer'
-import RecomendedFilms from './RecomendedFilms'
+import RecomendedFilms from '../../components/RecomendedFilms'
 
 
 

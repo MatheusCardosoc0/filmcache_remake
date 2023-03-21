@@ -1,15 +1,17 @@
-import { Paragraph, Title } from '@/components/GlobalElements'
+import { Paragraph, Press, Title } from '@/components/GlobalElements'
 import { useDataContext } from '@/context/DataContext'
 import { urlImages } from '@/services/urlImages'
+import { useRouter } from 'next/router'
 import React from 'react'
 import {} from 'react-icons/ai'
 
 const DetailsContainer = () => {
 
   const { currentFilm } = useDataContext()
+  const router = useRouter()
 
   return (
-    <section className='flex flex-[3] justify-center py-2 bg-[#847e7e] flex-col items-center gap-20 mr-[30%]'>
+    <section className='flex justify-center py-2 w-full bg-[#847e7e] flex-col items-center gap-20 mr-[30%]'>
       <div className='p-2 drop-shadow-[1px_1px_1px_black] bg-[#c4c2c2] rounded-xl w-[90%]'>
         <Title.H2 stylish='text-4xl md:text-6xl text-center gap-2 flex flex-col'>
           {currentFilm.title}
@@ -51,6 +53,17 @@ const DetailsContainer = () => {
           </span>
         </div>
         
+        <div className='flex w-full justify-around'>
+          <Press.Button text='Pagina inicial'
+          color='main'
+          stylish='p-2 text-2xl'
+          onClick={() => router.push('/')} />
+
+          <Press.Button text='Ver trailer'
+          color='trailer'
+          stylish='p-2 text-2xl'
+          onClick={() => router.push(`/trailer/${currentFilm.id}`)} />
+        </div>
       </div>
     </section>
   )
