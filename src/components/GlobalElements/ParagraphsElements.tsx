@@ -7,7 +7,7 @@ interface ParagraphProps extends GlobalElementsInterface {
 
 const Base = ({ children, stylish, color = "secondary" }: ParagraphProps) => {
   return (
-    <p className={`text-md md:text-lg text-[#cdd2ce] ${stylish}`}>
+    <p className={`text-md md:text-lg ${stylish}`}>
       {children}
     </p>
   )

@@ -27,6 +27,10 @@
   border-right: 1px solid black;
 }
 
+.NOT_SCROLL::-webkit-scrollbar{
+  display: none;
+}
+
 .Shadow{
   inset: 0;
   background-image: linear-gradient(to top, rgb(111, 107, 107), rgba(0, 0, 0, 0));

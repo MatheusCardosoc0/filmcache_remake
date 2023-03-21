@@ -16,8 +16,6 @@ export function useGetFilmsByGenre(){
     try {
       const response = await api.get("discover/movie", {
         params: {
-          api_key: "ccbfbc8dd52c71d7f1a46e1b46db20ee",
-          language: "pt-br",
           page: page,
           with_genres: genre || undefined
         }

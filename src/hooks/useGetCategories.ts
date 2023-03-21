@@ -10,11 +10,7 @@ export function useGetCategories(){
   async function GetGenres(){
     setIsLoading(true)
     try {
-      const response = await api.get('/genre/movie/list', {
-        params: {
-          api_key: "ccbfbc8dd52c71d7f1a46e1b46db20ee",
-          language: "pt-br"
-      }})
+      const response = await api.get('/genre/movie/list')
   
       setGenres(response.data.genres)
       setError('')

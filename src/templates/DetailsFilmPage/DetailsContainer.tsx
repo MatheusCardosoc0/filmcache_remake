@@ -28,6 +28,7 @@ const DetailsContainer = () => {
             {currentFilm.overview}
           </Paragraph.Bolder>
         </div>
+
         <div className='flex justify-around w-full px-2 text-white drop-shadow-[1px_1px_2px_black] text-xl font-semibold'>
           <span>
             <Paragraph.Base>Lingua original:</Paragraph.Base>
@@ -38,6 +39,7 @@ const DetailsContainer = () => {
             {currentFilm.release_date}
           </span>
         </div>
+
         <div className='flex justify-around w-full px-2 text-white drop-shadow-[1px_1px_2px_black] text-xl font-semibold'>
           <span>
             <Paragraph.Base>Nota média:</Paragraph.Base>
@@ -48,6 +50,7 @@ const DetailsContainer = () => {
             {currentFilm.popularity}
           </span>
         </div>
+        
       </div>
     </section>
   )

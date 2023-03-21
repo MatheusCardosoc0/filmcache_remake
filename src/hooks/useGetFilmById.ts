@@ -13,12 +13,7 @@ export function useGetFilmById(film_id: number){
   async function getFilmById() {
     setIsLoading(true)
     try {
-      const response = await api.get((`movie/${film_id}`), {
-        params: {
-          api_key: "ccbfbc8dd52c71d7f1a46e1b46db20ee",
-          language: "pt-br",
-        }
-      })
+      const response = await api.get(`movie/${film_id}`)
 
       setCurrentFilm(response.data)
     } catch (error) {
