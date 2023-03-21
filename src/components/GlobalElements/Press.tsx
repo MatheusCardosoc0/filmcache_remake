@@ -1,10 +1,13 @@
+import { useRouter } from 'next/router'
 import React, { ButtonHTMLAttributes } from 'react'
 import { GlobalElementsInterface } from './@types/GlobalElementsInterface'
 
-type ButtonProps = { color?: 'trailer' | 'detail' | 'main', text: string }
+type ButtonProps = { color?: 'trailer' | 'detail' | 'main' }
   & Omit<GlobalElementsInterface, 'children'> & ButtonHTMLAttributes<HTMLButtonElement>
 
-const Button = ({ stylish, color, text, ...rest }: ButtonProps) => {
+const Button = ({ stylish, color, ...rest }: ButtonProps) => {
+
+  const router = useRouter()
 
   const colorate = () => {
     if(color == 'detail'){
@@ -25,7 +28,9 @@ const Button = ({ stylish, color, text, ...rest }: ButtonProps) => {
       <div className={`p-1 lg:p-3 drop-shadow-[1px_1px_3px_black] hover:drop-shadow-[0px_0px_1px_black] rounded-xl group-hover:brightness-90 lg:text-2xl ${stylish} ${colorate()}`}>
 
         <p className='font-semibold text-white drop-shadow-[0px_1px_2px_black]'>
-          {text}
+          {color == 'detail' && 'Detalhes'}
+          {color == 'main' && 'Voltar ao Inicio'}
+          {color == 'trailer' && 'Ver trailer'}
         </p>
       </div>
     </button>

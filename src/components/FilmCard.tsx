@@ -19,9 +19,9 @@ const FilmCard = ({ film }: { film: Film }) => {
         </Title.H2>
 
         <div className='flex flex-col lg:flex-row gap-6'>
-          <Press.Button text='Ver detalhes' color='detail'
+          <Press.Button color='detail'
           onClick={() => router.push(`film_detail/${film.id}`)} />
-          <Press.Button text='Ver trailer' color='trailer'
+          <Press.Button color='trailer'
           onClick={() => router.push(`trailer/${film.id}`)} />
         </div>
 

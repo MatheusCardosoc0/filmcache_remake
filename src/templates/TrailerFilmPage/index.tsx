@@ -4,7 +4,7 @@ import TrailerContainer from './TrailerContainer'
 
 const TrailerFilmPage = () => {
   return (
-    <div className='flex w-full bg-[#9d9999]'>
+    <div className='flex w-full bg-[#007076]'>
       <TrailerContainer />
       <RecomendedFilms />
     </div>

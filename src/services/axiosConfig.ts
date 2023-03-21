@@ -1,3 +1,4 @@
+import { TrailerProps } from "@/@types/TrailerProps";
 import axios from "axios";
 
 const api = axios.create({
@@ -17,12 +18,15 @@ const getTrailer = axios.create({
 })
 
 async function getApiTrailer(film_id: number){
-  try {
-    const response = await getTrailer(`movie/${film_id}/videos`)
 
-    return response.data
-  } catch (error) {
-    console.log(error)
+  const response = await getTrailer(`movie/${film_id}/videos`)
+
+  const filter = response.data.results.find((trailer: TrailerProps) => trailer.name === 'Official Trailer')
+
+  if(filter){
+    return filter
+  } else {
+    throw new Error('error')
   }
 }
 
