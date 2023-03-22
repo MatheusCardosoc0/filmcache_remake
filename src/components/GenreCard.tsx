@@ -1,6 +1,5 @@
 import { GenreProps } from '@/@types/GenreProps'
 import { useDataContext } from '@/context/DataContext'
-import { useGetFilmsByGenre } from '@/hooks/useGetFilmsByGenre'
 import React from 'react'
 import { Paragraph } from './GlobalElements'
 

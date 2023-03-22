@@ -3,7 +3,6 @@ import Loading from '@/components/Loading'
 import NavigatePagesButton from '@/components/NavigatePagesButton'
 import { useGetFilmsByGenre } from '@/hooks/useGetFilmsByGenre'
 import React from 'react'
-import { BsArrowDownLeftCircleFill, BsArrowLeftCircleFill, BsArrowRightCircleFill } from 'react-icons/bs'
 
 const FilmContainer = () => {
 

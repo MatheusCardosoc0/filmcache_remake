@@ -1,11 +1,9 @@
-import { TrailerProps } from '@/@types/TrailerProps'
-import { Paragraph, Press, Title } from '@/components/GlobalElements'
+import { Paragraph, Press} from '@/components/GlobalElements'
 import Loading from '@/components/Loading'
 import ModifiquedTitle from '@/components/ModifiquedTitle'
 import { useDataContext } from '@/context/DataContext'
 import { useGetTrailer } from '@/hooks/useGetTrailer'
-import { api, getApiTrailer } from '@/services/axiosConfig'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router'
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });

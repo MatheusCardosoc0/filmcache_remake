@@ -4,7 +4,7 @@ import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
 
 const Footer = () => {
   return (
-    <footer className='w-full RADIAL py-20'>
+    <footer className='w-full RADIAL py-20 border-t-8 border-[#262726]'>
       <div className='w-[90%] max-w-[700px] justify-center items-center flex flex-col mx-auto gap-8'>
         <img src='/assets/Logo.png'
           className='w-[120px] h-[120px]' />
@@ -13,7 +13,7 @@ const Footer = () => {
           Agradecemos por visitar o site da Cine_See! Esperamos que tenha encontrado as informações e recomendações que procurava. Continue acompanhando nossas atualizações para descobrir novos filmes incríveis!
         </Paragraph.Bolder>
 
-        <Title.H3>
+        <Title.H3 stylish='text-center'>
           Feito por Matheus Cardoso
         </Title.H3>
 

@@ -2,8 +2,7 @@ import { Paragraph, Title } from '@/components/GlobalElements'
 import Loading from '@/components/Loading'
 import RecomedationCard from '@/components/RecomendationCard'
 import { useGetRecomendations } from '@/hooks/useGetRecomendations'
-import { api } from '@/services/axiosConfig'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 
 const RecomendedFilms = () => {
 

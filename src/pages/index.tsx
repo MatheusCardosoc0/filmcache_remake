@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import { Main } from 'next/document'
 import MainPage from '@/templates/MainPage'
 
 export default function Home() {

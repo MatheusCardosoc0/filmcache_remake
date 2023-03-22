@@ -1,4 +1,3 @@
-import { Press } from '@/components/GlobalElements'
 import { useGetSearchFilms } from '@/hooks/useGetSearchFilms'
 import React from 'react'
 
