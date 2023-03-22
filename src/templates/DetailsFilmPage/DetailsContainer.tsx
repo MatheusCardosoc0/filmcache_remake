@@ -12,16 +12,16 @@ const DetailsContainer = () => {
   const router = useRouter()
 
   return (
-    <section className='flex justify-center pt-6 pb-20 w-full bg-[#a2833a] flex-col items-center gap-20 mr-[30%]'>
+    <section className='flex justify-center pt-6 pb-20 w-full bg-[#272623] flex-col items-center gap-20 sm:mr-[30%]'>
 
       <ModifiquedTitle />
       
       <div className='flex flex-col justify-center items-center gap-8'>
 
         <img src={`${urlImages}${currentFilm.backdrop_path}`}
-          className="border-[12px] border-[#04dc20] drop-shadow-[1px_1px_4px_black]" />
+          className="border-[12px] border-[#262626] drop-shadow-[1px_1px_4px_black]" />
 
-        <div className='w-[90%] max-w-[620px] p-4 bg-[#5ed20c] rounded-xl drop-shadow-[1px_1px_3px_black]'>
+        <div className='w-[90%] max-w-[620px] p-4 bg-[#151515] rounded-xl drop-shadow-[1px_1px_3px_black]'>
           <Paragraph.Bolder stylish='text-justify'>
             {currentFilm.overview}
           </Paragraph.Bolder>
@@ -49,7 +49,7 @@ const DetailsContainer = () => {
           </span>
         </div>
         
-        <div className='flex w-full justify-around'>
+        <div className='flex sm:w-full flex-col sm:flex-row gap-12 w-[80%] justify-around'>
           <Press.Button
           color='main'
           stylish='p-2 text-2xl'

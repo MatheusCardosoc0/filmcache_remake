@@ -18,11 +18,11 @@ const TrailerContainer = () => {
   const { error, isLoading, trailer } = useGetTrailer()
 
   return (
-    <div className='mr-[30%] w-full justify-center text-center items-center flex flex-col gap-20 pt-6 h-screen pb-20'>
+    <div className='sm:mr-[30%] w-full justify-center text-center items-center flex flex-col gap-20  h-full pb-20 py-6'>
 
       <ModifiquedTitle />
 
-      <div className='h-[326px] w-[95%] lg:h-[500px] flex justify-center items-center flex-col gap-20'>
+      <div className='w-[95%] max-w-[700px] flex justify-center items-center flex-col gap-20'>
         {error && (
           <Paragraph.Bolder>
             {error}
@@ -30,14 +30,13 @@ const TrailerContainer = () => {
         )}
         {isLoading || error ? <Loading /> :
           <ReactPlayer
-            height={"100%"}
             width={"100%"}
             url={`https://www.youtube.com/watch?v=${trailer.key}`}
             controls={true}
           />}
       </div>
 
-      <div className='flex w-full justify-around items-center'>
+      <div className='flex sm:w-full flex-col sm:flex-row gap-12 w-[80%] justify-around'>
         <Press.Button color='detail'
           stylish='p-2 text-2xl'
           onClick={() => router.push(`/film_detail/${currentFilm.id}`)} />
