@@ -1,10 +1,13 @@
 import { TrailerProps } from "@/@types/TrailerProps";
 import axios from "axios";
 
+
+const key = process.env.NEXT_PUBLIC_API_KEY
+
 const api = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
   params: {
-    api_key: "ccbfbc8dd52c71d7f1a46e1b46db20ee",
+    api_key: key,
     language: "pt-br",
   }
 })
@@ -12,7 +15,7 @@ const api = axios.create({
 const getTrailer = axios.create({
   baseURL: "https://api.themoviedb.org/3/",
   params: {
-    api_key: "ccbfbc8dd52c71d7f1a46e1b46db20ee",
+    api_key: key,
     language: "en",
   }
 })
