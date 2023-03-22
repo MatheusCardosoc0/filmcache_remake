@@ -8,7 +8,7 @@ const GenresContainer = () => {
   const { error, genres, isloading } = useGetCategories()
 
   return (
-    <div className='flex overflow-x-scroll scrollCustom p-4 gap-4 bg-[#d9d8d8]'>
+    <div className='flex overflow-x-scroll scrollCustom p-4 gap-4 bg-[#06958c]'>
       {isloading ? <Loading /> : (
         genres.map(genre => (
           <GenreCard key={genre.id}

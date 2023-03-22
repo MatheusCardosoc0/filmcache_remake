@@ -18,7 +18,7 @@ const TrailerContainer = () => {
   const { error, isLoading, trailer } = useGetTrailer()
 
   return (
-    <div className='mr-[30%] w-full justify-center text-center items-center flex flex-col gap-20 py-6 h-screen'>
+    <div className='mr-[30%] w-full justify-center text-center items-center flex flex-col gap-20 pt-6 h-screen pb-20'>
 
       <ModifiquedTitle />
 

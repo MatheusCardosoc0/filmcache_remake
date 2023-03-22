@@ -10,8 +10,8 @@ const FilmContainer = () => {
   const { films, isLoading } = useGetFilmsByGenre()
 
   return (
-    <section className='p-3 lg:p-8 bg-[#a09797]'>
-      <div className='drop-shadow-[0px_0px_4px_black] bg-[#c0bebe] rounded-xl py-7 lg:py-12 items-center flex flex-col justify-center p-2'>
+    <section className='p-3 lg:p-8 bg-[#746802]'>
+      <div className='drop-shadow-[0px_0px_4px_black] bg-[#057b80] rounded-xl py-7 lg:py-12 items-center flex flex-col justify-center p-2'>
 
         <div className='flex flex-wrap p-2  py-8  justify-center gap-8'>
           {isLoading ? <Loading /> : (

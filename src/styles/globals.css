@@ -1,28 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+    
 
 
 .scrollCustom {
   scrollbar-width: thin;
-  scrollbar-color: rgb(183, 179, 179) transparent;
+  scrollbar-color: rgb(240, 230, 230) transparent;
 }
 
 .scrollCustom::-webkit-scrollbar {
   height: 12px; /* A altura só é vista quando a rolagem é horizontal */
-  border: 1px solid rgba(230, 217, 217, 0.842);
+  border: 1px solid rgba(253, 248, 248, 0.842);
   box-shadow: 0px 4px 3px rgb(0, 0, 0);
 }
 
 .scrollCustom::-webkit-scrollbar-track {
-  background-color: rgb(181, 185, 185);
+  background-color: rgb(120, 43, 43);
   padding: 2px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.365);
   border-top: 2px solid rgba(0, 0, 0, 0.315);
 }
 
 .scrollCustom::-webkit-scrollbar-thumb {
-  background-color: #737070;
+  background-color: #cf1c0c;
   border-bottom: 1px solid black;
   border-right: 1px solid black;
 }
@@ -33,7 +34,7 @@
 
 .Shadow{
   inset: 0;
-  background-image: linear-gradient(to top, rgb(111, 107, 107), rgba(0, 0, 0, 0));
+  background-image: linear-gradient(to top, rgba(111, 107, 107, 0.268), rgba(0, 0, 0, 0));
   height: 40%;
   position: absolute;
   margin-top: 70.50%;
