@@ -20,7 +20,9 @@ const H2 = ({stylish, children}: GlobalElementsInterface) => {
 
 const H3 = ({stylish, children}: GlobalElementsInterface) => {
   return (
-    <h3>H1</h3>
+    <h3 className={`text-3xl text-white`}>
+      {children}
+    </h3>
   )
 }
 

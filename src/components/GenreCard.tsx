@@ -15,7 +15,7 @@ const GenreCard = ({ genre }: GenreCardProps) => {
   return (
     <button className='p-2 bg-[#656565] rounded-xl drop-shadow-[1px_1px_2px_black] flex justify-center items-center'
       onClick={() => setGenre(genre.id)}>
-      <div className='p-2 bg-[#484848] rounded-xl drop-shadow-[1px_1px_2px_black] hover:drop-shadow-[0px_0px_1px_black] hover:bg-[#1d7c03]'>
+      <div className='p-2 bg-[#c09401] rounded-xl drop-shadow-[1px_1px_2px_black] hover:drop-shadow-[0px_0px_1px_black] hover:bg-[#f8e805]'>
         <Paragraph.Base stylish='text-[#ffffff]'>
           {genre.name}
         </Paragraph.Base>

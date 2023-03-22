@@ -18,7 +18,6 @@ const Header = () => {
         <Paragraph.Bolder stylish='w-full text-center px-2 sm:w-[500px]'>
           Cine_See o site com informações, detalhes e avaliações de filmes, utilizando a API do themovieDB. Descubra seus filmes favoritos e compartilhe suas opiniões com a comunidade de amantes do cinema.
         </Paragraph.Bolder>
-
       </div>
     </header>
   )

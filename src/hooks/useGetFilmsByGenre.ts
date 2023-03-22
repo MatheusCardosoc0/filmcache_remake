@@ -4,12 +4,11 @@ import { api } from "@/services/axiosConfig"
 import { useEffect, useState } from "react"
 
 export function useGetFilmsByGenre(){
-  const [films, setFilms] = useState<Film[]>([])
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
   
 
-  const {genre, page} = useDataContext()
+  const {genre, page, films, setFilms} = useDataContext()
 
   async function GetFilms() {
     setIsLoading(true)

@@ -1,13 +1,15 @@
 import React from 'react'
 import FilmContainer from './FilmContainer'
 import GenresContainer from './GenresContainer'
+import Searchbar from './Searchbar'
 
 const ContentContainer = () => {
 
   return (
     <>
-        <GenresContainer />
-        <FilmContainer />
+      <Searchbar />
+      <GenresContainer />
+      <FilmContainer />
     </>
   )
 }

@@ -41,3 +41,7 @@
   border-radius: 0.75rem;
   z-index: -1;
 }
+
+.RADIAL{
+  background: radial-gradient(rgb(90, 81, 81), rgb(72, 68, 68), rgb(2, 68, 2));
+}

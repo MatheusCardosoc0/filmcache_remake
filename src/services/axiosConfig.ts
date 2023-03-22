@@ -30,6 +30,22 @@ async function getApiTrailer(film_id: number){
   }
 }
 
-export {getApiTrailer, api}
+
+async function getFilmByTitle(title: string){
+  const response = await api.get(`search/movie`, {
+    params: {
+      language: 'pt-br',
+      query: title
+    }
+  })
+
+  if(response.data){
+    return response.data.results
+  }else{
+    throw new Error('Não foi encontrado este filme')
+  }
+}
+
+export {getApiTrailer, api, getFilmByTitle}
 
 
