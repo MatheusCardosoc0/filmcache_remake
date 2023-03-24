@@ -2,18 +2,16 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 
-const {fontFamily} = require("tailwindcss/defaultTheme")
+const { fontFamily } = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: [
-    "./src/**/*.tsx"
-  ],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {
       fontFamily: {
-        wdc: ["var(--prompt)", ...fontFamily.sans]
-      }
-    },
+        wdc: ['var(--prompt)', ...fontFamily.sans]
+      },
+    }
   },
-  plugins: [],
+  plugins: []
 }
